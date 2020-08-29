@@ -44,6 +44,8 @@ autocmd FileType js setlocal shiftwidth=2 tabstop=2
 
 " NERD Tree
 let NERDTreeShowLineNumbers=1
+let NERDTreeMapActivateNode='l'
+let NERDTreeMapCloseDir='h'
 map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
@@ -91,7 +93,6 @@ set smartcase
 set scrolloff=1
 set autoread
 autocmd! bufwritepost .vimrc source %    " Automatically load .vimrc on save
-
 
 " auto-expanding
 inoremap (<Tab> (<CR>)<C-c>O<Tab>
