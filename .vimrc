@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
     " Nerd Tree
     Plug 'preservim/nerdtree'
     
+    " Smooth Scrolling
+    Plug 'psliwka/vim-smoothie'
+    
     " Syntax checker
     Plug 'vim-syntastic/syntastic'
     
