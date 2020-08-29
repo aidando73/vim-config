@@ -88,6 +88,8 @@ set relativenumber
 set numberwidth=5
 set ignorecase
 set smartcase
+set scrolloff=1
+set autoread
 autocmd! bufwritepost .vimrc source %    " Automatically load .vimrc on save
 
 

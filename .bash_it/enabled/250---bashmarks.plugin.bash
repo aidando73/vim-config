@@ -1,0 +1,1 @@
+../plugins/available/bashmarks.plugin.bash

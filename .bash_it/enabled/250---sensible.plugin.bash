@@ -1,0 +1,1 @@
+../plugins/available/sensible.plugin.bash
