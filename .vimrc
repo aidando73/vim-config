@@ -109,12 +109,13 @@ inoremap [; [<CR>];<C-c>O<Tab>
 inoremap [, [<CR>],<C-c>O<Tab>
 
 
-" Cut and pasting
-nnoremap d "_d
-nnoremap x "_x
-nnoremap <leader>d d
-nnoremap <leader>D "+d
-nnoremap <leader>P "+p
+" Cut and pasting to system clipboard
+nnoremap <leader>d "+d
+vnoremap <leader>d "+d
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 
 
 " `matchit.vim` is built-in so let's enable it!
