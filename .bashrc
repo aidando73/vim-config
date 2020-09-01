@@ -21,7 +21,7 @@ export BASH_IT="${HOME}/.bash_it"
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/
-export BASH_IT_THEME='cupcake'
+export BASH_IT_THEME='modern'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
@@ -48,3 +48,5 @@ export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -43,26 +43,10 @@ alias lsl='ls -l'
 # Coloured grep
 alias grep='grep --color=auto'
 
-
 alias bashit='bash-it'
 alias q='exit'
 alias c='clear'
 alias p='cat'
-
-
-# easy cd commands
-alias cdh='cd ~'
-alias up='cd ..'
-alias up1='cd ..'
-alias up2='cd ../..'
-alias up3='cd ../../..'
-alias up4='cd ../../../..'
-alias up5='cd ../../../../..'
-alias up6='cd ../../../../../..'
-alias up7='cd ../../../../../../..'
-alias up8='cd ../../../../../../../..'
-alias up9='cd ../../../../../../../../..'
-
 
 #Sudo commands
 alias sudovim='sudo -E vim'

@@ -43,7 +43,7 @@ icon_user="💁  "
 icon_host=" @ 💻  "
 icon_directory=" in 📁  "
 icon_branch="🌿"
-icon_end="└❯ "
+icon_end="└ "
 
 # extra spaces ensure legiblity in prompt
 
