@@ -43,11 +43,13 @@ set nowrap
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType js setlocal shiftwidth=2 tabstop=2
-" Window navigation
-nnoremap <leader>h <c-w>h
-nnoremap <leader>j <c-w>j
-nnoremap <leader>k <c-w>k
-nnoremap <leader>l <c-w>l
+set formatoptions-=cro
+" Window Management
+set splitbelow
+set splitright
+" Per project rc files
+set exrc
+set secure
 
 
 " ***MAPPINGS***
@@ -68,9 +70,11 @@ nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
-" Per project rc files
-set exrc
-set secure
+" Window navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 
 
