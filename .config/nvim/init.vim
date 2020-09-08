@@ -15,6 +15,7 @@ set numberwidth=5
 set ignorecase
 set smartcase
 set scrolloff=1
+ set sidescrolloff=10
 set wildmode=full 		       " the CR key to validate."
 set path+=**
 " Saving
@@ -25,6 +26,7 @@ runtime macros/matchit.vim
 :set cul
 :autocmd InsertEnter,InsertLeave * set cul!
 "Aesthetics
+set cmdheight=1
 set termguicolors
 "let g:gruvbox_contrast_dark='hard'
 colorscheme onedark
@@ -50,19 +52,21 @@ set splitright
 " Per project rc files
 set exrc
 set secure
+" Nvim Python
+set pyxversion=2
 
 
 " ***MAPPINGS***
 " auto-expanding
-inoremap (<Tab> (<CR>)<C-c>O<Tab>
-inoremap (; (<CR>);<C-c>O<Tab>
-inoremap (, (<CR>),<C-c>O<Tab>
-inoremap {<Tab> {<CR>}<C-c>O<Tab>
-inoremap {; {<CR>};<C-c>O<Tab>
-inoremap {, {<CR>},<C-c>O<Tab>
-inoremap [<Tab> [<CR>]<C-c>O<Tab>
-inoremap [; [<CR>];<C-c>O<Tab>
-inoremap [, [<CR>],<C-c>O<Tab>
+inoremap (<Tab> (<CR>)<C-c>O
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap {<Tab> {<CR>}<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap [<Tab> [<CR>]<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
 " Cut and pasting to system clipboard
 nnoremap <leader>d "+d
 vnoremap <leader>d "+d
@@ -75,8 +79,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-
 
 
 " ***OBJECTS***

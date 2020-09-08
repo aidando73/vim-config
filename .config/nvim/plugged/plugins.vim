@@ -15,15 +15,17 @@ call plug#begin()
     " Niceties
     " Autocompletion and Snippets engine. With LSP support. requires nvim >= 0.4.3 && nodejs >= 10.12
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        " coc-snippets => sudo pip2 install --upgrade pynvim 
+        " coc-eslint => sudo npm install -g eslint && eslint --init && npm init
+       
     " ALE - Asynchronous error engine
-    Plug 'dense-analysis/ale'
+    " Plug 'dense-analysis/ale'
     
     
     " File Navigation 
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'preservim/nerdtree'
-
+    Plug 'vifm/vifm.vim'
 call plug#end()
 
 " Lightline config
@@ -35,13 +37,16 @@ let g:lightline = {
   \            ]
   \ }
   \ }
+set noshowmode
 
 " NERD Tree
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapActivateNode='l'
 let NERDTreeQuitOnOpen = 1
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+map <c-n> :EditVifm .<CR>
+
 
 " Coc
 set hidden
@@ -62,6 +67,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
 " Use <c-space> to trigger completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
@@ -69,4 +77,9 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-
+"Rip Grep
+"" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
