@@ -8,6 +8,8 @@ call plug#begin()
     Plug 'tpope/vim-commentary' " gc
     Plug 'vim-scripts/ReplaceWithRegister' " gr
     Plug 'michaeljsmith/vim-indent-object' " ii ai iI aI
+    Plug 'bkad/CamelCaseMotion'
+    Plug 'justinmk/vim-sneak'
     " Smooth Scrolling
     Plug 'psliwka/vim-smoothie'
     " vim-enuch? vim surroun
@@ -17,9 +19,6 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
         " coc-snippets => sudo pip2 install --upgrade pynvim 
         " coc-eslint => sudo npm install -g eslint && eslint --init && npm init
-       
-    " ALE - Asynchronous error engine
-    " Plug 'dense-analysis/ale'
     
     
     " File Navigation 
@@ -38,6 +37,19 @@ let g:lightline = {
   \ }
   \ }
 set noshowmode
+
+" Sneak Rebinding
+nmap <leader>s <Plug>Sneak_s
+nmap <leader>S <Plug>Sneak_S
+" visual-mode
+xmap <leader>s <Plug>Sneak_s
+xmap <leader>S <Plug>Sneak_S
+" operator-pending-mode
+omap <leader>s <Plug>Sneak_s
+omap <leader>S <Plug>Sneak_S
+
+" Camel Case Motion
+let g:camelcasemotion_key = '\'
 
 " NERD Tree
 let NERDTreeShowHidden=1
@@ -67,9 +79,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <C-j> for both expand and jump (make expand higher priority.)
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-
 " Use <c-space> to trigger completion.
 if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
@@ -77,9 +86,22 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+
+imap <c-l> <plug>(coc-snippets-expand-jump)
+
 "Rip Grep
 "" Get text in files with Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+"FZF 
+nnoremap <leader>f :FZF<CR>

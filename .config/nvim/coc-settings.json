@@ -1,5 +1,36 @@
 {
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "",
-  "diagnostic.infoSign": ""
+  "diagnostic.infoSign": "",
+  "suggest.completionItemKindLabels": {
+        "keyword": "",
+        "variable": "",
+        "value": "",
+        "operator": "Ψ",
+        "function": "⨕",
+        "reference": "渚",
+        "constant": "",
+        "method": "",
+        "struct": "פּ",
+        "class": "",
+        "interface": "",
+        "text": "♣",
+        "enum": "",
+        "enumMember": "",
+        "module": "",
+        "color": "",
+        "property": "",
+        "field": "",
+        "unit": "",
+        "event": "鬒",
+        "file": "",
+        "folder": "",
+        "snippet": "",
+        "typeParameter": "",
+        "default": ""
+  },
+  "snippets.textmateSnippetsRoots": ["/home/giahuydo99/.config/coc/text-mate-snippets"],
+  "snippets.extends": {
+      "sh": ["zsh"]
+  }
 }

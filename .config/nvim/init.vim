@@ -1,5 +1,3 @@
-" Seperate config files
-source $HOME/.config/nvim/plugged/plugins.vim
 
 " Vanilla Settings
 " Essentials
@@ -41,6 +39,10 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nowrap
+function Tab(num) 
+    let &tabstop=a:num
+    let &shiftwidth=a:num
+endfunction
 " File types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
@@ -79,6 +81,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" Autoindent Move
+nnoremap <leader>= ia<esc>==x
 
 
 " ***OBJECTS***
@@ -101,11 +105,20 @@ function! SelectLine(isinner, count)
         else
             exe "norm!V".lines."j"
         endif
-    end
+        end
 endfunction
+
+
 " ENTIRE FILE OBJECT
 xnoremap ae ggog$
 onoremap ae :normal vae<CR>
 xnoremap ie ggoG$
 onoremap ie :normal vie<CR>
 
+
+
+
+
+
+" Seperate config files
+source $HOME/.config/nvim/plugged/plugins.vim
