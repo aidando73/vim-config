@@ -33,8 +33,6 @@ if &term =~ '256color'
 endif
 
 " Basic text editing
-set autoindent                 " Minimal automatic indenting for any filetype.
-set cindent
 set backspace=indent,eol,start " Proper backspace behavior.]
 
 " UI

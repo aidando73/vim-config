@@ -11,15 +11,15 @@ nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>r :source %<CR>
 
 " auto-expanding
-inoremap (<Tab> (<CR>)<C-c>O
-inoremap (; (<CR>);<C-c>O
-inoremap (, (<CR>),<C-c>O
+inoremap (<Tab> (<CR>)<C-c>O<tab>
+inoremap (; (<CR>);<C-c>O<tab>
+inoremap (, (<CR>),<C-c>O<tab>
 inoremap {<Tab> {<CR>}<C-c>O
 inoremap {; {<CR>};<C-c>O
 inoremap {, {<CR>},<C-c>O
-inoremap [<Tab> [<CR>]<C-c>O
-inoremap [; [<CR>];<C-c>O
-inoremap [, [<CR>],<C-c>O
+inoremap [<Tab> [<CR>]<C-c>O<tab>
+inoremap [; [<CR>];<C-c>O<tab>
+inoremap [, [<CR>],<C-c>O<tab>
 
 " Cut and pasting to system clipboard
 nnoremap <leader>d "+d
