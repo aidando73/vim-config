@@ -1,12 +1,15 @@
 " ***MAPPINGS***
+" Essentials
 set ttimeoutlen=300
 let mapleader = " "
 inoremap <silent> jk <Esc>
 inoremap <silent> JK <Esc>
+
 " Saving
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>r :source %<CR>
+
 " auto-expanding
 inoremap (<Tab> (<CR>)<C-c>O
 inoremap (; (<CR>);<C-c>O
@@ -17,6 +20,7 @@ inoremap {, {<CR>},<C-c>O
 inoremap [<Tab> [<CR>]<C-c>O
 inoremap [; [<CR>];<C-c>O
 inoremap [, [<CR>],<C-c>O
+
 " Cut and pasting to system clipboard
 nnoremap <leader>d "+d
 vnoremap <leader>d "+d
@@ -24,16 +28,22 @@ nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+
 " x should delete to null register
 nnoremap x "_x
+
 " Window navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 " Autoindent Move
 nnoremap <leader>= ia<esc>==x
 
+" Insert Newline operator
+nnoremap <leader>o m`o<esc>``
+nnoremap <leader>O m`O<esc>``
 
 " ***OBJECTS***
 " Entire line
