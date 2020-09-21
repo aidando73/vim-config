@@ -23,9 +23,6 @@ augroup END
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
-"packadd! dracula
-"let g:dracula_italic = 0
-":colorscheme dracula
 if &term =~ '256color'
 	" Disable Background Color Erase (BCE) so that color schemes
 	" work properly when Vim is used inside tmux and GNU screen.
