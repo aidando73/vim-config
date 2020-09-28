@@ -39,7 +39,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Autoindent Move
-nnoremap <leader>= ia<esc>==x
+nnoremap <leader>= aa<esc>==x
 
 " Insert Newline operator
 nnoremap <leader>o m`o<esc>``
