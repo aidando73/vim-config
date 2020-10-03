@@ -39,11 +39,19 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Autoindent Move
-nnoremap <leader>= aa<esc>==x
+nnoremap <silent> <leader>= :call AlignIndent()<CR>
+function AlignIndent()
+    if getline(".") =~ '\s*\S'
+        exe "normal! =="
+    else
+        exe "normal! aa\<esc>==\"_x"
+    endif
+endf
 
 " Insert Newline operator
 nnoremap <leader>o m`o<esc>``
 nnoremap <leader>O m`O<esc>``
+
 
 " ***OBJECTS***
 " Entire line

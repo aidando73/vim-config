@@ -2,6 +2,7 @@
 source $HOME/.vim/init/filetypes.vim
 source $HOME/.vim/init/mappings.vim
 source $HOME/.vim/init/settings.vim
+source $HOME/.vim/init/commands.vim
 
 autocmd! bufwritepost .vimrc source %    " Automatically load .vimrc on save
 " Commands not on by default in nvim

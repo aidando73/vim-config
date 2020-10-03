@@ -40,3 +40,5 @@ set formatoptions-=cro
 set splitbelow
 set splitright
 
+" Wrap management
+set showbreak=﬌
