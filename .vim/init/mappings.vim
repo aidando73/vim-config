@@ -11,6 +11,31 @@ nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>r :source %<CR>
 
+
+" Cut and pasting to system clipboard
+nnoremap <leader>d "+d
+vnoremap <leader>d "+d
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+
+" x should delete to null register
+nnoremap x "_x
+
+" Window navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Autoindent Move
+nnoremap <silent> <leader>= :call mappings#AlignIndent()<CR>
+
+
+
+
+" *** INSERTMODE ***
 " auto-expanding
 inoremap (<Tab>    ()<left>
 inoremap (;        ();<left><left>
@@ -43,25 +68,6 @@ inoremap `,        ``,<left><left>
 " mapping for creating a 'code block'
 inoremap <silent> \<CR> <c-o>:call mappings#CreateBlock()<cr>
 
-" Cut and pasting to system clipboard
-nnoremap <leader>d "+d
-vnoremap <leader>d "+d
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
-
-" x should delete to null register
-nnoremap x "_x
-
-" Window navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Autoindent Move
-nnoremap <silent> <leader>= :call mappings#AlignIndent()<CR>
 
 
 " ***OBJECTS***
