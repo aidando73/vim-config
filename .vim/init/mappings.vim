@@ -11,16 +11,36 @@ nnoremap <silent> <leader>w :w<CR>
 nnoremap <silent> <leader>r :source %<CR>
 
 " auto-expanding
-inoremap (<Tab> (<CR>)<C-c>O<tab>
-inoremap (; (<CR>);<C-c>O<tab>
-inoremap (, (<CR>),<C-c>O<tab>
-inoremap {<Tab> {<CR>}<C-c>O
-inoremap {; {<CR>};<C-c>O
-inoremap {, {<CR>},<C-c>O
-inoremap [<Tab> [<CR>]<C-c>O<tab>
-inoremap [; [<CR>];<C-c>O<tab>
-inoremap [, [<CR>],<C-c>O<tab>
+inoremap (<Tab>    ()<left>
+inoremap (;        ();<left><left>
+inoremap (,        (),<left><left>
 
+inoremap [<Tab>    []<left>
+inoremap [;        [];<left><left>
+inoremap [,        [],<left><left>
+
+inoremap '<Tab>    ''<left>
+inoremap ';        '';<left><left>
+inoremap ',        '',<left><left>
+
+inoremap "<Tab>    ""<left>
+inoremap ";        "";<left><left>
+inoremap ",        "",<left><left>
+
+inoremap <<Tab>    <><left>
+inoremap <;        <>;<left><left>
+inoremap <,        <>,<left><left>
+
+inoremap {<Tab>    {}<left>
+inoremap {;        {};<left><left>
+inoremap {,        {},<left><left>
+
+inoremap `<Tab>    ``<left>
+inoremap `;        ``;<left><left>
+inoremap `,        ``,<left><left>
+
+" Common sequence: creating a 'code block'
+inoremap \<CR> <CR><up><end><CR><tab>
 " Cut and pasting to system clipboard
 nnoremap <leader>d "+d
 vnoremap <leader>d "+d
@@ -47,10 +67,6 @@ function AlignIndent()
         exe "normal! aa\<esc>==\"_x"
     endif
 endf
-
-" Insert Newline operator
-nnoremap <leader>o m`o<esc>``
-nnoremap <leader>O m`O<esc>``
 
 
 " ***OBJECTS***
