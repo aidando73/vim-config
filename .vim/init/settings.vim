@@ -23,7 +23,7 @@ runtime macros/matchit.vim
 :autocmd InsertEnter,InsertLeave * set cul!
 
 " Indentation
-set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab

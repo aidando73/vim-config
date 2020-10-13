@@ -1,3 +1,4 @@
+autocmd! bufwritepost mappings.vim source %    " Automatically load .vimrc on save
 " ***MAPPINGS***
 " Essentials
 set ttimeoutlen=300
@@ -39,8 +40,9 @@ inoremap `<Tab>    ``<left>
 inoremap `;        ``;<left><left>
 inoremap `,        ``,<left><left>
 
-" Common sequence: creating a 'code block'
-inoremap \<CR> <CR><up><end><CR><tab>
+" mapping for creating a 'code block'
+inoremap <silent> \<CR> <c-o>:call mappings#CreateBlock()<cr>
+
 " Cut and pasting to system clipboard
 nnoremap <leader>d "+d
 vnoremap <leader>d "+d
@@ -59,39 +61,13 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Autoindent Move
-nnoremap <silent> <leader>= :call AlignIndent()<CR>
-function AlignIndent()
-    if getline(".") =~ '\s*\S'
-        exe "normal! =="
-    else
-        exe "normal! aa\<esc>==\"_x"
-    endif
-endf
+nnoremap <silent> <leader>= :call mappings#AlignIndent()<CR>
 
 
 " ***OBJECTS***
 " Entire line
-onoremap il :call SelectLine(1, v:count)<CR>
-onoremap al :call SelectLine(0, v:count)<CR>
-function! SelectLine(isinner, count)
-    let lines = a:count - 1
-    if a:isinner 
-        "Inner line	
-        if lines <= 0
-            exe "norm!v^og_"
-        else
-            exe "norm!v^o".lines."jg_"
-        endif
-    else
-        "Arounded line
-        if lines <= 0
-            exe "norm!V"
-        else
-            exe "norm!V".lines."j"
-        endif
-        end
-endfunction
-
+onoremap il :call mappings#SelectLine(1, v:count)<CR>
+onoremap al :call mappings#SelectLine(0, v:count)<CR>
 
 " ENTIRE FILE OBJECT
 xnoremap ae ggog$
