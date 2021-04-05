@@ -12,7 +12,7 @@ set -o vi
 
 # Editing Settings
 alias rebash="vim ~/.bashrc; source ~/.bashrc"
-alias revim="vim ~/.vimrc; source ~/.vimrc"
+alias revim="vim ~/.vimrc"
 
 # ls 
 alias ls='ls -F -h --color=always -v --author --time-style=long-iso'
