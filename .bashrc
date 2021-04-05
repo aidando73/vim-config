@@ -4,16 +4,6 @@
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 
-# Git helpers
-#cache user and pass
-git config --global credential.helper cache 1800
-git config --global user.name "Aidan Do"
-git config --global user.email "giahuydo99@gmail.com"
-
-#aliases
-git config --global alias.cam "commit -am"
-git config --global alias.s "status"
-
 
 # Set ls colors
 eval "$(dircolors)"
@@ -32,16 +22,5 @@ alias lsl='ls -l'
 # Coloured grep
 alias grep='grep --color=auto'
 
-alias q='exit'
-alias c='clear'
-alias p='cat'
-
 #Sudo commands
 alias sudovim='sudo -E vim'
-
-#clipboard
-alias xclip='xclip -selection c'
-
-#svn aliases
-alias svncam='svn commit -m'
-alias sadd.='svn add --force * --auto-props --parents --depth infinity -q'
