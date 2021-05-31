@@ -9,7 +9,7 @@ autocmd! bufwritepost .vimrc source %    " Automatically load .vimrc on save
 syntax on
 set nocompatible
 set showcmd
-set clipboard=unnamed
+set clipboard=
 set autoread
 
 " Insert Mode visual helpers
