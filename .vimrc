@@ -170,3 +170,17 @@ set backspace=indent,eol,start " Proper backspace behavior.]
 " UI
 set laststatus=2
 set wildmenu                   " Great command-line completion, use <Tab> to move around and 
+
+" ### Plugins
+call plug#begin('~/.vim/plugged')
+    Plug 'psliwka/vim-smoothie'
+    Plug 'preservim/nerdtree'
+call plug#end()
+
+let g:smoothie_experimental_mappings=1
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
