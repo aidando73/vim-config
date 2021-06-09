@@ -1,8 +1,3 @@
-" Separate config files
-source $HOME/.vim/init/mappings.vim
-source $HOME/.vim/init/settings.vim
-source $HOME/.vim/init/commands.vim
-
 " *** Essentials ***
 autocmd! bufwritepost .vimrc source %    " Automatically load .vimrc on save
 syntax on
@@ -173,7 +168,7 @@ set wildmenu                   " Great command-line completion, use <Tab> to mov
 
 " ### Plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'psliwka/vim-smoothie'
+    Plug 'REslim30/vim-smoothie'
     Plug 'preservim/nerdtree'
 call plug#end()
 
@@ -181,6 +176,5 @@ let g:smoothie_experimental_mappings=1
 
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
