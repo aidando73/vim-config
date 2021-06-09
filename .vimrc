@@ -168,8 +168,21 @@ set wildmenu                   " Great command-line completion, use <Tab> to mov
 
 " ### Plugins
 call plug#begin('~/.vim/plugged')
-    Plug 'REslim30/vim-smoothie'
-    Plug 'preservim/nerdtree'
+	" Quality of life
+	Plug 'REslim30/vim-smoothie'
+	Plug 'preservim/nerdtree'
+	Plug 'machakann/vim-highlightedyank'
+
+
+	" Actions
+	Plug 'tpope/vim-surround' " Surround
+	Plug 'tpope/vim-commentary' " Comment
+	Plug 'vim-scripts/ReplaceWithRegister' " Replace with register
+
+	 " Text objects
+	Plug 'vim-scripts/argtextobj.vim' " argument
+	Plug 'kana/vim-textobj-entire' " Entire text file
+	Plug 'michaeljsmith/vim-indent-object' " Indent object
 call plug#end()
 
 let g:smoothie_experimental_mappings=1
