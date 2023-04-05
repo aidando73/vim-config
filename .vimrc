@@ -167,6 +167,7 @@ set laststatus=2
 set wildmenu                   " Great command-line completion, use <Tab> to move around and 
 
 " ### Plugins
+" To install run command: :PlugInstall
 call plug#begin('~/.vim/plugged')
 	" Quality of life
 	Plug 'REslim30/vim-smoothie'
