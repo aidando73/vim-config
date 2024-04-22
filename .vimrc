@@ -182,6 +182,7 @@ call plug#begin('~/.vim/plugged')
 
 	 " Text objects
 	Plug 'vim-scripts/argtextobj.vim' " argument
+	Plug 'kana/vim-textobj-user' " Required to make vim-textobj-entire work
 	Plug 'kana/vim-textobj-entire' " Entire text file
 	Plug 'michaeljsmith/vim-indent-object' " Indent object
 call plug#end()
