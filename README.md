@@ -3,7 +3,7 @@
 cd ~
 wget https://codeload.github.com/aidando73/vim-config/zip/refs/heads/master -O vim-config.zip
 unzip vim-config.zip
-cp vim-config-master/.* .
+cp -r vim-config-master/.* .
 rm -rf README.md vim-config.zip vim-config-master
 ```
 
