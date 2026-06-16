@@ -1,3 +1,7 @@
+> [!WARNING]
+> **Deprecated.** This repo has been merged into [aidando73/dotfiles](https://github.com/aidando73/dotfiles) under `vim/`.
+> Install via dotfiles instead: `curl -fsSL d.aidando.com/setup.sh | bash`. This repo is no longer maintained.
+
 # Vim Config
 ```bash
 cd ~
